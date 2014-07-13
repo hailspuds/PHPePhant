@@ -73,16 +73,15 @@ $phant_data = array(
 And so on.
 
 
-
-
 ### Settings
 
 Currently, you can change the server address from the ```https://data.sparkfun.com``` default.
 
 Assuming the above example, just change the address in this line:
 
-```$phant->setServerHostname("https://data.sparkfun.com");```
-
+~~~
+$phant->setServerHostname("https://data.sparkfun.com"); 
+~~~
 
 ### Why PHPePhant?
 
