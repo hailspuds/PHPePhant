@@ -3,7 +3,13 @@ PHPePhant
 
 A simple PHP class that connects to [SparkFun's Phant data storage service](https://data.sparkfun.com).
 
-It's far from finished, but at the moment it will allow your to POST data to the service.
+It's far from finished, but at the moment it will allow your to:
+
+* POST data to the service.
+
+What it won't yet do:
+
+* Everything else - including proper response codes, etc. It's in a very, very early stage. Feel free to add to it :)
 
 
 ### Example
@@ -86,6 +92,22 @@ $phant->setServerHostname("https://data.sparkfun.com");
 ### Why PHPePhant?
 
 It's called PHPePhant because the PHP replaced the "ele" in "elephant" - the name the SparkFun people used to name the the service "Phant". Yes, not very funny, but there you go!
+
+
+### TODO
+
+* Response/return codes/info
+   * Success 
+   * Rate limits
+       * X-Rate-Limit-Limit
+       * X-Rate-Limit-Remaining
+       * X-Rate-Limit-Reset
+* Design a better way to add the fields to POSTing
+* Add "[clear](http://phant.io/docs/management/clear/)" functions
+* Add "[delete](http://phant.io/docs/management/delete/)" functions
+* Add an [Output](http://phant.io/docs/output/http/) function (JSON, XML & PHP array)
+* Add a [Stats](http://phant.io/docs/output/stats/) function (JSON, XML & PHP array)
+   
 
 
 #### Thanks
