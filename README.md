@@ -40,6 +40,8 @@ If the data has POSTed successfully, it should return:
 1 success
 ~~~
 
+You can see [a test stream here](https://data.sparkfun.com/streams/aGGmOjK7aqTRoox47Yjq). 
+
 To send your own data, you'll have to change the settings in the ```$phant_data``` array. It will need to match the fields you've *already* set up before using this class.
 
 [You can set up a stream here.](https://data.sparkfun.com/streams/make)
