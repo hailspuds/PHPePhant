@@ -83,13 +83,16 @@ Assuming the above example, just change the address in this line:
 
 ```$phant->setServerHostname("https://data.sparkfun.com");```
 
+
 ### Why PHPePhant?
 
 It's called PHPePhant because the PHP replaced the "ele" in "elephant" - the name the SparkFun people used to name the the service "Phant". Yes, not very funny, but there you go!
 
+
 #### Thanks
 
 This class uses the wonderful [php-curl-class](https://github.com/php-curl-class/php-curl-class) for CURL.
+
 
 #### Licence
 
