@@ -32,19 +32,51 @@ class PHPePhant
 
 		if ($curl->error) 
 		{
-		    print 'Error: ' . $curl->error_code . ': ' . $curl->error_message;
+	    return array(
+				'response' => trim($curl->response), 
+				'http_status' => $curl->response_headers['Status-Line'],
+				'X-Rate-Limit-Limit' => $curl->response_headers['X-Rate-Limit-Limit'], 
+				'X-Rate-Limit-Remaining' => $curl->response_headers['X-Rate-Limit-Remaining'],
+				'X-Rate-Limit-Reset' => $curl->response_headers['X-Rate-Limit-Reset'],
+			);
 		}
 		else 
 		{
-		    print $curl->response;
-				//var_dump($curl->request_headers);
-				//var_dump($curl->response_headers);
+	    return array(
+				'response' => trim($curl->response), 
+				'http_status' => $curl->response_headers['Status-Line'],
+				'X-Rate-Limit-Limit' => $curl->response_headers['X-Rate-Limit-Limit'], 
+				'X-Rate-Limit-Remaining' => $curl->response_headers['X-Rate-Limit-Remaining'],
+				'X-Rate-Limit-Reset' => $curl->response_headers['X-Rate-Limit-Reset'],
+			);
 		}	
+	}
+	
+	public function clear_stream()
+	{
+		$curl = new Curl();
+		$curl->setHeader('Phant-Private-Key', $this->private_key);
+		$curl->delete($this->server_hostname . '/input/' . $this->public_key);
+		if ($curl->error) 
+		{
+	    return array(
+				'response' => trim($curl->response), 
+				'http_status' => $curl->response_headers['Status-Line']
+			);
+		}
+		else
+		{
+	    return array(
+				'response' => trim($curl->response), 
+				'http_status' => $curl->response_headers['Status-Line']
+			);
+		}
 	}
 	
 	public function log_input($data)
 	{
-		$this->http_request($data);
+		$result = $this->http_request($data);
+		return $result;
 	}
 	
 }

@@ -14,6 +14,11 @@
 	    'humidity' => '34.5',
 	);
 
-	$phant->log_input($phant_data);
-
+	print_r($phant->log_input($phant_data));
+	
+	//To clear the stream, all you'll need is this:
+	//(It's commented at the moment, because it'll clear what you've just added - and it'll look like the system doesn't work)
+	
+	//$phant->clear_stream();
+	
 ?>
