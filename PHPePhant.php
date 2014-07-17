@@ -79,6 +79,27 @@ class PHPePhant
 		return $result;
 	}
 	
+	public function delete_stream($delete_key)
+	{
+		$curl = new Curl();
+		$curl->setHeader('Phant-Delete-Key', $delete_key);
+		$curl->delete($this->server_hostname . '/streams/' . $this->public_key);
+		
+		if ($curl->error) 
+		{
+	    return array(
+				'http_status' => $curl->response_headers['Status-Line']
+			);
+		}
+		else
+		{
+	    return array(
+				'http_status' => $curl->response_headers['Status-Line']
+			);
+		}
+		
+	}
+	
 }
 	
 	

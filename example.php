@@ -21,4 +21,7 @@
 	
 	//$phant->clear_stream();
 	
+	//To delete:
+	//$phant->delete_stream('DELETE_KEY')
+	
 ?>
