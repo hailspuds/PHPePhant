@@ -150,9 +150,25 @@ Array
 )
 ~~~
 
+### Example - delete stream
 
+It's very similar to the way data is cleared.
 
+1. Include the usual (the class, the public key)
+2. Then call the deletion method, but instead of setting the deletion key (like you do with the private/public), just include it in the method call:
 
+~~~
+$phant->delete_stream('DELETE_KEY')
+~~~
+
+It will return a simple array with a HTTP code:
+
+~~~
+Array
+(
+    [http_status] => HTTP/1.1 202 Accepted
+)
+~~~
 
 
 ### Settings
