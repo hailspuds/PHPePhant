@@ -9,10 +9,11 @@ It's far from finished, but at the moment it will allow your to:
   * Supply a return message.
 * Clear data
   * Supply a return message.
+* Delete stream
 
 What it won't yet do:
 
-* Everything else. It's in a very, very early stage. Feel free to add to it :)
+* Return results if queried (i.e., output previously stored values)
 
 
 ### Example - sending/input data
@@ -196,7 +197,7 @@ It's called PHPePhant because the PHP replaced the "ele" in "elephant" - the nam
        * ~~X-Rate-Limit-Reset~~
 * Design a better way to add the fields to POSTing
 * ~~Add "[clear](http://phant.io/docs/management/clear/)" functions~~
-* Add "[delete](http://phant.io/docs/management/delete/)" entire stream function
+* ~~Add "[delete](http://phant.io/docs/management/delete/)" entire stream function~~
 * Add an [Output](http://phant.io/docs/output/http/) function (JSON, XML & PHP array)
 * Add a [Stats](http://phant.io/docs/output/stats/) function (JSON, XML & PHP array)
    
